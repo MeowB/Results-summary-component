@@ -16,10 +16,10 @@
   --Persian-blue: hsla(241, 72%, 46%, 0)	// circle ;
 }
 
-main {
-  min-height: 100vh;
+.container {
+  display: block;
 }
-main .result {
+.container .result {
   background: linear-gradient(to bottom, #7857ff 0%, 30%, #2e2be9 100%);
   padding: 20px;
   text-align: center;
@@ -27,45 +27,47 @@ main .result {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   color: var(--Pale-blue);
 }
-main .result h1 {
+.container .result h1 {
   font-size: 1.1em;
   color: var(--Light-lavender);
   font-weight: 500;
+  margin-bottom: 20px;
 }
-main .result .score {
-  padding: 15px;
+.container .result .score {
+  padding: 30px;
   margin: 20px;
   background: linear-gradient(to bottom, #4e21ca 0%, rgba(36, 33, 202, 0) 100%);
   border-radius: 50%;
   width: 6em;
   color: var(--Light-lavender);
 }
-main .result .score .big {
+.container .result .score .big {
   font-size: 3em;
   font-weight: 700;
   color: var(--White);
 }
-main .result span {
+.container .result span {
   color: var(--Light-lavender);
   margin: 15px;
 }
-main .summary {
+.container .summary {
   padding: 20px;
   display: flex;
   flex-direction: column;
 }
-main .summary h2 {
+.container .summary h2 {
   margin: 10px;
   font-size: 1.2em;
 }
-main .summary ul {
+.container .summary ul {
   margin-bottom: 15px;
   list-style: none;
   width: 100%;
 }
-main .summary ul li {
+.container .summary ul li {
   padding: 15px;
   margin: 15px;
   display: flex;
@@ -74,37 +76,37 @@ main .summary ul li {
   border-radius: 10px;
   height: 2em;
 }
-main .summary ul li span {
+.container .summary ul li span {
   display: flex;
 }
-main .summary ul li span svg {
+.container .summary ul li span svg {
   margin-right: 5px;
 }
-main .summary ul li:nth-child(1) {
+.container .summary ul li:nth-child(1) {
   background-color: rgba(255, 87, 87, 0.08);
 }
-main .summary ul li:nth-child(1) span:first-child {
+.container .summary ul li:nth-child(1) span:first-child {
   color: #ff5757;
 }
-main .summary ul li:nth-child(2) {
+.container .summary ul li:nth-child(2) {
   background-color: rgba(255, 176, 31, 0.08);
 }
-main .summary ul li:nth-child(2) span:first-child {
+.container .summary ul li:nth-child(2) span:first-child {
   color: #ffb01f;
 }
-main .summary ul li:nth-child(3) {
+.container .summary ul li:nth-child(3) {
   background-color: rgba(0, 189, 145, 0.08);
 }
-main .summary ul li:nth-child(3) span:first-child {
+.container .summary ul li:nth-child(3) span:first-child {
   color: #00bd91;
 }
-main .summary ul li:nth-child(4) {
+.container .summary ul li:nth-child(4) {
   background-color: rgba(17, 37, 212, 0.08);
 }
-main .summary ul li:nth-child(4) span:first-child {
+.container .summary ul li:nth-child(4) span:first-child {
   color: #1125d4;
 }
-main .summary button {
+.container .summary button {
   padding: 15px;
   border-radius: 50px;
   background-color: var(--Dark-gray-blue);
@@ -112,6 +114,10 @@ main .summary button {
   font-size: 1.3em;
   width: 80vw;
   margin: auto;
+}
+.container .summary button:hover {
+  background: linear-gradient(to bottom, #7857ff 0%, 30%, #2e2be9 100%);
+  cursor: pointer;
 }
 
 .attribution {
@@ -124,6 +130,35 @@ main .summary button {
 }
 .attribution a {
   color: #3e52a3;
+}
+
+@media (min-width: 720px) {
+  main {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  main .container {
+    display: flex;
+    border-radius: 30px;
+    box-shadow: 5px 1px 50px rgba(0, 0, 0, 0.1);
+  }
+  main .container .result {
+    width: 17em;
+    height: 25em;
+    border-radius: 30px;
+  }
+  main .container .summary {
+    width: 17em;
+    height: 25em;
+  }
+  main .container .summary ul li {
+    height: auto;
+  }
+  main .container .summary button {
+    width: 80%;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
